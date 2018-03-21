@@ -66,4 +66,5 @@ db.sqlite3
 static/
 
 # Project
+.vscode/
 *.psd

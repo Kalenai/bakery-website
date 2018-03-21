@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,500|Montserrat|Playfair+Display|Tangerine');
+
+:root {
+  --heading-font: 'Alegreya', serif;
+  --tagline-font: 'Playfair Display', serif;
+  --fancy-font: 'Tangerine', cursive;
+  --body-font: 'Montserrat', sans-serif;
+}
+
+/* 
+  =====================
+  = Global 
+  =====================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+  =====================
+  = Utility
+  =====================
+*/
+
+
+
+/*
+  =====================
+  = Navigation
+  =====================
+*/
+
+nav > * {
+  display: inline-block;
+}
+
+.nav-list > li {
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+}
+
+.logo {
+  font-family: var(--fancy-font);
+  font-size: 3.0rem;
+}
+
+.nav-list {
+  font-family: var(--heading-font);
+  font-variant: small-caps;
+}
+
+/*
+  =====================
+  = Hero
+  =====================
+*/
+
+.tagline {
+  font-family: var(--tagline-font);
+  font-size: 3.75rem;
+}
+
+.blurb {
+  font-family: var(--body-font);
+}
+
+.hero-btn {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-variant: small-caps;
+}
