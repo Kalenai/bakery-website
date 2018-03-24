@@ -5,6 +5,9 @@
   --tagline-font: 'Playfair Display', serif;
   --fancy-font: 'Tangerine', cursive;
   --body-font: 'Montserrat', sans-serif;
+
+  --nav-bg: #2225;
+  --nav-bg-hover: #2228;
 }
 
 /* 
@@ -28,6 +31,7 @@ html {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -36,11 +40,17 @@ a:hover {
 
 /*
   =====================
-  = Utility
+  = Hero Section
   =====================
 */
 
-
+.hero {
+  background: #777777 url("../images/bread-bg.png") no-repeat;
+  background-size: cover;
+  height: 50rem;
+  color: white;
+  text-shadow: #222;
+}
 
 /*
   =====================
@@ -48,42 +58,137 @@ a:hover {
   =====================
 */
 
-nav > * {
-  display: inline-block;
+nav {
+  background-color: var(--nav-bg);
 }
 
-.nav-list > li {
-  display: inline-block;
-  padding: 0px 10px 0px 10px;
+.nav-bar {
+  width: 79%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background-color: rgb(70, 95, 95); */
+}
+
+.nav-bar > * {
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
 
 .logo {
   font-family: var(--fancy-font);
   font-size: 3.0rem;
+  text-align: left;
+}
+
+.nav-list,
+.social-list {
+  display: flex;
 }
 
 .nav-list {
   font-family: var(--heading-font);
   font-variant: small-caps;
+  flex-basis: 50%;
+  justify-content: space-between;
+}
+
+.social-list {
+  justify-content: flex-end;
+}
+
+.nav-list li,
+.social-list li {
+  list-style-type: none;
+  font-size: 1.05rem;
+}
+
+.social-btn {
+  padding: 0 1.125rem;
+}
+
+.social-btn:last-of-type {
+  padding-right: 0;
 }
 
 /*
   =====================
-  = Hero
+  = Hero Content
   =====================
 */
 
 .tagline {
   font-family: var(--tagline-font);
-  font-size: 3.75rem;
+  font-size: 4.75rem;
 }
 
 .blurb {
   font-family: var(--body-font);
+  font-size: 1.5rem;
 }
 
 .hero-btn {
   font-family: var(--heading-font);
   font-weight: 500;
   font-variant: small-caps;
+  font-size: 1.5rem;
+  padding: 1.0rem 2.5rem;
+  background-color: var(--nav-bg);
+  border: none;
+}
+
+.hero-btn:hover {
+  background-color: var(--nav-bg-hover);
+  text-decoration: underline white;
+}
+
+/*
+  =====================
+  = Hero Divider
+  =====================
+*/
+
+.divider {
+  font-family: var(--body-font);
+  font-size: 2.0rem;
+}
+
+.divider > * {
+  display: inline-block;
+}
+
+#divider1 {
+  transform: translateY(-0.5rem);
+}
+
+#divider2 {
+  transform-origin: 130%;
+  transform: rotate(25deg);
+}
+
+#divider4 {
+  transform-origin: -70%;
+  transform: rotate(-25deg);
+}
+
+#divider5 {
+  transform: translateY(-0.5rem);
+}
+
+#divider6 {
+  transform-origin: 130%;
+  transform: rotate(25deg);
+}
+
+#divider8 {
+  transform-origin: -70%;
+  transform: rotate(-25deg);
+}
+
+#divider9 {
+  transform: translateY(-0.5rem);
 }
