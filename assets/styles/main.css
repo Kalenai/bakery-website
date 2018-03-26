@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya:400,500|Montserrat|Playfair+Display|Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,500|Montserrat|Playfair+Display|Tangerine|Allura');
 
 :root {
   --heading-font: 'Alegreya', serif;
   --tagline-font: 'Playfair Display', serif;
-  --fancy-font: 'Tangerine', cursive;
+  --fancy-font: 'Allura', 'Tangerine', cursive;
   --body-font: 'Montserrat', sans-serif;
 
   --nav-bg: #2225;
@@ -29,6 +29,10 @@ html {
   font-size: 100%;
 }
 
+h1, p {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -47,7 +51,7 @@ a:hover {
 .hero {
   background: #777777 url("../images/bread-bg.png") no-repeat;
   background-size: cover;
-  height: 50rem;
+  height: 56rem;
   color: white;
   text-shadow: #222;
 }
@@ -81,8 +85,9 @@ nav {
 
 .logo {
   font-family: var(--fancy-font);
-  font-size: 3.0rem;
+  font-size: 2.75rem;
   text-align: left;
+  padding: 0.7rem 0;
 }
 
 .nav-list,
@@ -93,7 +98,7 @@ nav {
 .nav-list {
   font-family: var(--heading-font);
   font-variant: small-caps;
-  flex-basis: 50%;
+  flex-basis: 25%;
   justify-content: space-between;
 }
 
@@ -123,7 +128,9 @@ nav {
 
 .tagline {
   font-family: var(--tagline-font);
-  font-size: 4.75rem;
+  font-size: 6.0rem;
+  letter-spacing: 0.3rem;
+  padding: 12.0rem 0 0 0;
 }
 
 .blurb {
@@ -135,8 +142,10 @@ nav {
   font-family: var(--heading-font);
   font-weight: 500;
   font-variant: small-caps;
-  font-size: 1.5rem;
-  padding: 1.0rem 2.5rem;
+  font-size: 1.0rem;
+  letter-spacing: 0.35rem;
+  padding: 0.85rem 2.5rem;
+  margin: 5.0rem 0 7.0rem 0;
   background-color: var(--nav-bg);
   border: none;
 }
@@ -155,40 +164,31 @@ nav {
 .divider {
   font-family: var(--body-font);
   font-size: 2.0rem;
+  padding: 3.0rem 0;
 }
 
 .divider > * {
   display: inline-block;
 }
 
-#divider1 {
-  transform: translateY(-0.5rem);
+#divider1,
+#divider5,
+#divider9 {
+  transform: translateY(-0.65rem);
 }
 
-#divider2 {
-  transform-origin: 130%;
-  transform: rotate(25deg);
-}
-
-#divider4 {
-  transform-origin: -70%;
-  transform: rotate(-25deg);
-}
-
-#divider5 {
-  transform: translateY(-0.5rem);
-}
-
+#divider2,
 #divider6 {
   transform-origin: 130%;
   transform: rotate(25deg);
 }
 
+#divider4,
 #divider8 {
   transform-origin: -70%;
   transform: rotate(-25deg);
 }
 
 #divider9 {
-  transform: translateY(-0.5rem);
+  transform: translateY(-1.0rem);
 }
