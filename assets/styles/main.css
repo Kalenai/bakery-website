@@ -1,13 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya:400,500|Montserrat|Playfair+Display|Tangerine|Allura');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,500|Montserrat|Playfair+Display|Allura');
 
 :root {
   --heading-font: 'Alegreya', serif;
   --tagline-font: 'Playfair Display', serif;
-  --fancy-font: 'Allura', 'Tangerine', cursive;
+  --fancy-font: 'Allura', cursive;
   --body-font: 'Montserrat', sans-serif;
 
-  --nav-bg: #2225;
-  --nav-bg-hover: #2228;
+  --nav-bg: #1117;
+  --nav-bg-hover: #111b;
+
+  --dark-colored-text: #a47d5e;
+  --light-colored-text: #dfc691;
+}
+
+/*
+  =====================
+  = Utility Classes
+  =====================
+*/
+
+.is-caps {
+  font-variant: small-caps;
 }
 
 /* 
@@ -29,6 +42,10 @@ html {
   font-size: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
 h1, p {
   margin: 0;
 }
@@ -40,6 +57,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  font-family: var(--body-font);
 }
 
 /*
@@ -73,8 +94,6 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
-  /* background-color: rgb(70, 95, 95); */
 }
 
 .nav-bar > * {
@@ -97,7 +116,6 @@ nav {
 
 .nav-list {
   font-family: var(--heading-font);
-  font-variant: small-caps;
   flex-basis: 25%;
   justify-content: space-between;
 }
@@ -134,7 +152,6 @@ nav {
 }
 
 .blurb {
-  font-family: var(--body-font);
   font-size: 1.5rem;
 }
 
@@ -157,7 +174,7 @@ nav {
 
 /*
   =====================
-  = Hero Divider
+  = Hero Dividers
   =====================
 */
 
@@ -191,4 +208,54 @@ nav {
 
 #divider9 {
   transform: translateY(-1.0rem);
+}
+
+.section-divider {
+  background: transparent;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  bottom: -40px;
+  margin: 0 auto;
+  border: solid 2px var(--light-colored-text);
+  border-radius: 50%;
+  text-align: left;
+}
+
+.section-divider:after {
+  content: "";
+  background: white url("../images/bread-divider.png") no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+
+  /* Fixing slight offset of the ':after' pseudo-element and scaling it down */
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%) translateY(50%) scale(0.8);
+}
+
+/*
+  =====================
+  = About Section
+  =====================
+*/
+
+.about {
+  background: #f8f7f0 url("") no-repeat;
+  background-size: cover;
+  height: 56rem;
+}
+
+.about-container {
+  width: 79%;
+  margin: 0 auto;
+}
+
+.cake-blurb {
+  width: 50%;
+  padding: 0 3.0rem;
+  float: left;
 }
