@@ -9,7 +9,8 @@
   --nav-bg: #1117;
   --nav-bg-hover: #111b;
 
-  --dark-colored-text: #a47d5e;
+  --dark-colored-text: #56534c;
+  --mid-colored-text: #a47d5e;
   --light-colored-text: #dfc691;
 }
 
@@ -40,6 +41,8 @@
 
 html {
   font-size: 100%;
+  letter-spacing: 0.075rem;
+  color: var(--dark-colored-text);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,6 +64,7 @@ a:hover {
 
 p {
   font-family: var(--body-font);
+  line-height: 1.5rem;
 }
 
 /*
@@ -72,6 +76,7 @@ p {
 .hero {
   background: #777777 url("../images/bread-bg.png") no-repeat;
   background-size: cover;
+  position: relative;
   height: 56rem;
   color: white;
   text-shadow: #222;
@@ -158,7 +163,6 @@ nav {
 .hero-btn {
   font-family: var(--heading-font);
   font-weight: 500;
-  font-variant: small-caps;
   font-size: 1.0rem;
   letter-spacing: 0.35rem;
   padding: 0.85rem 2.5rem;
@@ -211,30 +215,18 @@ nav {
 }
 
 .section-divider {
-  background: transparent;
-  position: relative;
-  width: 120px;
-  height: 120px;
-  bottom: -40px;
-  margin: 0 auto;
-  border: solid 2px var(--light-colored-text);
-  border-radius: 50%;
-  text-align: left;
-}
-
-.section-divider:after {
-  content: "";
   background: white url("../images/bread-divider.png") no-repeat;
   background-size: cover;
-  width: 120px;
-  height: 120px;
   position: absolute;
-  border-radius: 50%;
-
-  /* Fixing slight offset of the ':after' pseudo-element and scaling it down */
+  width: 100px;
+  height: 100px;
+  bottom: -55px;
   left: 50%;
-  bottom: 50%;
-  transform: translateX(-50%) translateY(50%) scale(0.8);
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px var(--light-colored-text);  
+  border-radius: 50%;
 }
 
 /*
@@ -246,16 +238,143 @@ nav {
 .about {
   background: #f8f7f0 url("") no-repeat;
   background-size: cover;
-  height: 56rem;
+  /* height: 56rem; */
 }
 
 .about-container {
-  width: 79%;
+  width: 65%;
   margin: 0 auto;
 }
 
-.cake-blurb {
+.left-container,
+.right-container {
   width: 50%;
-  padding: 0 3.0rem;
+  padding: 5.0rem 0rem;
+}
+
+/*
+  =====================
+  = About Left Container
+  =====================
+*/
+
+.left-container {
   float: left;
+  padding-right: 3.75rem;
+}
+
+.left-container h3 {
+  font-size: 3.125rem;
+  margin: 0;
+}
+
+.left-container h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.left-container h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--mid-colored-text);
+  margin: 0 0 0.5rem 0;
+}
+
+.left-container p {
+  font-size: 0.75rem;
+  margin: 2.5rem 0;
+}
+
+.chef-img {
+  height: 6.0rem;
+  margin: 2.75rem 0;
+}
+
+.chef-img * {
+  display: inline;
+  vertical-align: middle;
+}
+
+.chef-img h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-top: solid 1px var(--dark-colored-text);
+  border-bottom: solid 1px var(--dark-colored-text);
+  padding: 0.75rem 1.5rem;
+  margin: 0 2.0rem;
+}
+
+.chef-img img {
+  border-radius: 50%;
+  height: 100%;
+}
+
+.quote * {
+  font-size: 1.5rem;
+  color: var(--mid-colored-text);
+  width:50%;
+  display: inline-block;
+}
+
+.quote-text {
+  font-family: var(--fancy-font);
+}
+
+.left-quote,
+.right-quote {
+  font-size: 4.0rem;
+  color: #aaa8a4;
+  width: 10%;
+}
+
+.left-quote {
+  text-align: left;
+}
+
+.right-quote {
+  text-align: right;
+}
+
+/*
+  =====================
+  = About Right Container
+  =====================
+*/
+
+.right-container {
+  float: right; 
+ }
+
+.cake-grid {
+  position: relative;
+  margin: 0;
+}
+
+.cake-grid img {
+  width: 45%;
+  margin: 0.5rem;
+  outline: 5px solid white;
+  outline-offset: -10px;
+}
+
+.cake-grid h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--light-colored-text);
+  line-height: 2.5rem;
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  background: #fffe;
+  border: solid 3px transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 2px #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
