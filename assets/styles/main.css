@@ -47,10 +47,17 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
+  margin: 0;
 }
 
-h1, p {
-  margin: 0;
+h3 {
+  font-size: 3.125rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--mid-colored-text);
 }
 
 a {
@@ -63,8 +70,14 @@ a:hover {
 }
 
 p {
+  font-size: 0.75rem;
   font-family: var(--body-font);
   line-height: 1.5rem;
+  margin: 0;
+}
+
+section {
+  position: relative;
 }
 
 /*
@@ -76,7 +89,6 @@ p {
 .hero {
   background: #777777 url("../images/bread-bg.png") no-repeat;
   background-size: cover;
-  position: relative;
   height: 56rem;
   color: white;
   text-shadow: #222;
@@ -227,6 +239,7 @@ nav {
   background-clip: padding-box;
   box-shadow: 0 0 0 1px var(--light-colored-text);  
   border-radius: 50%;
+  z-index: 1;
 }
 
 /*
@@ -238,18 +251,18 @@ nav {
 .about {
   background: #f8f7f0 url("") no-repeat;
   background-size: cover;
-  /* height: 56rem; */
+  height: 45rem;
 }
 
 .about-container {
   width: 65%;
+  padding: 5.0rem 0rem;
   margin: 0 auto;
 }
 
-.left-container,
-.right-container {
+.left-about-container,
+.right-about-container {
   width: 50%;
-  padding: 5.0rem 0rem;
 }
 
 /*
@@ -258,30 +271,21 @@ nav {
   =====================
 */
 
-.left-container {
+.left-about-container {
   float: left;
   padding-right: 3.75rem;
 }
 
-.left-container h3 {
-  font-size: 3.125rem;
-  margin: 0;
-}
-
-.left-container h4 {
+.left-about-container h4 {
   font-size: 1.5rem;
   margin: 0;
 }
 
-.left-container h5 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--mid-colored-text);
+.left-about-container h5 {
   margin: 0 0 0.5rem 0;
 }
 
-.left-container p {
-  font-size: 0.75rem;
+.left-about-container p {
   margin: 2.5rem 0;
 }
 
@@ -341,7 +345,7 @@ nav {
   =====================
 */
 
-.right-container {
+.right-about-container {
   float: right; 
  }
 
@@ -377,4 +381,46 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*
+  =====================
+  = Recipes Section
+  =====================
+*/
+
+.recipes {
+  background: #ecece6 url("../images/recipes-bg.png") no-repeat;
+  background-size: cover;
+  height: 45rem;
+}
+
+.recipes-container {
+  background: white;
+  width: 65%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.left-recipes-container {
+  background: white;
+  width: 40%;
+  float: left;
+}
+
+.left-recipes-container img {
+  /* max-width: 100%; */
+  object-fit: cover;
+}
+
+.right-recipes-container {
+  /* width: 70%; */
+  float: right;
+}
+
+.right-recipes-container * {
+  text-align: left;
 }
