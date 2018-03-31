@@ -416,7 +416,7 @@ nav {
 
 .right-recipes-container {
   position: relative;
-  padding: 3.5rem 5.5rem 0 3.5rem;
+  padding: 4.5rem 5.5rem 0 4.0rem;
 }
 
 .right-recipes-container * {
@@ -467,4 +467,18 @@ nav {
 
 .time-box * {
   text-align: center;
+}
+
+.time-box h3 {
+  font-size: 5.5rem;
+  color: var(--light-colored-text);
+}
+
+.time-box h5 {
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.time-box p {
+  font-size : 1.0rem;
 }
